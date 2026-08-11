@@ -1,5 +1,5 @@
 {% set name = "light-curve-python" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/light-curve/light_curve-{{ version }}.tar.gz
-  sha256: 6fd0d870fa046304d0c76e20fd02a4896e45306dd3681690b5974909f516c8ba
+  sha256: 04983b81d4e74c80b48a5598efa9b7a8a1c49d6b9310dd881cc23c3665542c25
 
 build:
   script:
@@ -26,7 +26,7 @@ build:
     - CERES_LIB_DIR={{ PREFIX }}\Library\lib  # [win]
     # gsl discovery
     - LIBRARY_PATH={{ PREFIX }}/lib  # [osx and arm64]
-  number: 1
+  number: 0
 
 requirements:
   build:
